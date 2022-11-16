@@ -6,7 +6,7 @@ const Goal = require("../models/goalModel");
 // @route   GET /api/goals
 // @access  Private
 const getGoals = asyncHandler(async (req, res) => {
-  const goals = await Goal.find(); // get all goals from database
+  const goals = await Goal.find({ user: req.user.id }); // get all goals from a single user from database
 
   res.status(200).json(goals);
 });
