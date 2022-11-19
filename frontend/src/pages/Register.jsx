@@ -11,7 +11,7 @@ function Register() {
     name: "",
     email: "",
     password: "",
-    password: "",
+    password2: "",
   });
 
   const { name, email, password, password2 } = formData;
